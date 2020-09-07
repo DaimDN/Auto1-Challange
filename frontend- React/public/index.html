@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link href="https://image.flaticon.com/icons/svg/541/541732.svg" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="#000000" name="theme-color">
+	<meta content="Web site created using create-react-app" name="description">
+	<link href="%PUBLIC_URL%/logo192.png" rel="apple-touch-icon">
+	<link href="%PUBLIC_URL%/manifest.json" rel="manifest"><!-- CSS only -->
+	<link href="%PUBLIC_URL%/footer.css" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"><!-- JS, Popper.js, and jQuery -->
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js" charset="utf-8"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+	</script>
+	<title>Cookie Bakery</title>
+</head>
+<body class="bodycolor">
+	<div id="app"></div>
+	<footer class="new_footer_area bg_color">
+		<div class="new_footer_top">
+			<div class="container"></div>
+			<div class="footer_bg">
+				<div class="footer_bg_one"></div>
+				<div class="footer_bg_two"></div>
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6 col-sm-7">
+						<p class="mb-0 f_400">© 2020 All rights reserved.</p>
+					</div>
+					<div class="col-lg-6 col-sm-5 text-right">
+						<p>Made by <i class="icon_heart"></i> <a href="https://github.com/DaimDN">Daim</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script>
+	        (function() {
+	        if (!localStorage.getItem('cookieconsent')) {
+	        var request = new XMLHttpRequest();
+	        request.onreadystatechange = function() {
+	        if (this.readyState == 4 && this.status == 200) {
+	        var data = JSON.parse(request.responseText);
+	        var eu_country_codes = ['AL','AD','AM','AT','BY','BE','BA','BG','CH','CY','CZ','DE','DK','EE','ES','FO','FI','FR','GB','GE','GI','GR','HU','HR','IE','IS','IT','LT','LU','LV','MC','MK','MT','NO','NL','PO','PT','RO','RU','SE','SI','SK','SM','TR','UA','VA'];
+	        if (eu_country_codes.indexOf(data.countryCode) != -1) {
+	        document.body.innerHTML += '\
+	        <div class="cookieconsent" style="position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">\
+	        This site uses cookies. By continuing to use this website, you agree to their use. \
+	        <a href="/" style="color:#CCCCCC;">I Understand- Build By Daim<\/a>\
+	        <\/div>\
+	        ';
+	        document.querySelector('.cookieconsent a').onclick = function(e) {
+	        e.preventDefault();
+	        document.querySelector('.cookieconsent').style.display = 'none';
+	        localStorage.setItem('cookieconsent', true);
+	        };
+	        }
+	        }
+	        };
+	        request.open('GET', '', true);
+	        request.send();
+	        }
+	        })();
+	</script>
+</body>
+</html>

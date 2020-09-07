@@ -1,0 +1,235 @@
+@keyframes swing {
+    0%, 100% { transform: rotate(-30deg); }
+    20% {transform:scale(.95);}
+    50% { transform: rotate(30deg); }
+    80% {transform:scale(.95);}
+  }
+
+  @keyframes door {
+    0%, 100% { transform: rotate(360); }
+    20% {transform:scale(.95);}
+    50% { transform: rotate(30deg); }
+    80% {transform:scale(.95);}
+  }
+
+
+
+.platform{
+    width: 70%;
+    height: 45px;
+    border-radius: 50%;
+    margin : auto;
+    margin-top: 0%;
+    box-shadow: 20px 20px #888888;
+    
+}
+
+.platform:hover{
+    transform: scale(1.2);
+ 
+}
+.sun{
+    width: 10%;
+    height: 110px;
+    background-color: #ffeb3b;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 3%;
+    margin-left: 80%;
+    -webkit-animation: myfirst 1s linear ;
+    animation: myfirst 1s linear;
+    box-shadow: 0px 0px 20px 20px yellow;
+    animation: swing 1s infinite ease-in-out;
+}
+
+.sun-night{
+    width: 10%;
+    height: 110px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 3%;
+    margin-left: 80%;
+    -webkit-animation: myfirst 1s linear ;
+    animation: myfirst 1s linear;
+    box-shadow: 0px 0px 20px 20px white ;
+    animation: swing 1s infinite ease-in-out;
+}
+.sun:hover{
+    transform: scale(1.9);
+   
+   
+}
+
+
+.roof{
+    width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 250px 200px 250px;
+border-color: transparent transparent #ab003c transparent;
+position: relative;
+margin-top: -5%;
+margin-left: 30%;
+
+
+}
+
+.pillar{
+    width: 500px ;
+    height: 490px;
+    background-color: #ef9a9a;
+    position: relative;
+    margin-top: 0.2%;
+    margin-left: 29.9%;
+   box-shadow: 0px 0px 20px 6px #424242;
+   
+}
+.window-1{
+    margin-top: 30px;
+    height: 125px;
+    width: 60%;
+    background-color: #009688;
+    border-radius: 50%;
+  
+    border: 4px solid #A6CFFF;
+    box-shadow: 0px 0px 20px 6px #424242;
+}
+
+.window-1:hover{
+    margin-top: 30px;
+    height: 125px;
+    width: 60%;
+   background-image: url("https://image.flaticon.com/icons/svg/541/541732.svg");
+   background-repeat: none;
+    border-radius: 50%;
+    background-size: cover;
+    border: 4px solid #A6CFFF;
+    animation: swing 2s infinite ease-in-out;
+    box-shadow: 0px 0px 20px 20px white;
+}
+.house{
+    margin: auto !important;
+}
+.window-2{
+    height: 125px;
+    margin-top: 30px;
+    width: 60%;
+    background-color: #009688;
+    border-radius: 50%;
+    
+    border: 4px solid #A6CFFF;
+    box-shadow: 0px 0px 20px 6px #424242;
+}
+
+.window-2:hover{
+    margin-top: 30px;
+    height: 125px;
+    width: 60%;
+   background-image: url("https://image.flaticon.com/icons/svg/541/541732.svg");
+   background-repeat: none;
+    border-radius: 50%;
+    object-fit: contain;
+    background-size: cover;
+    animation: swing 2s infinite ease-in-out;
+    border: 4px solid #A6CFFF;
+    box-shadow: 0px 0px 20px 20px white;
+}
+
+
+.cookie{
+    width: 50%;
+    height: 70px;
+    background-color: #558b2f;
+    text-align: center;
+    position: relative;
+    left: 27%;
+    top: -10%;
+    border: 1px solid #1b5e20;
+    box-shadow: 0px 0px 20px 6px #c5e1a5;
+    z-index: 7;
+    border-radius: 20px;
+    
+}
+
+
+.door{
+    margin: auto;
+    margin-top: 40px;
+    height: 200px;
+    width: 130px;
+    background-color: #827717;
+    box-shadow: 0px 0px 20px 7px #fff3e0;
+    border-radius: 10px 0px 0px 10px;
+   margin-bottom: 100px !important;
+} 
+.door:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    animation: door 2s infinite ease-in-out;
+}
+
+.handle{
+    width: 30px;
+    height: 4px;
+    background-color: #795542;
+   position: relative;
+   top: 50%;
+}
+
+.mailbox{
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    position: absolute;
+    margin-top: 50px !important;
+    cursor: pointer;
+    border-radius: 10px;
+    right: 10%;
+    
+}
+.mailbox:hover{
+    transform: rotateY(210deg);
+}
+
+.strip{
+
+    margin: auto;
+    width: 70%;
+    height: 2px;
+    background-color: #795542;
+    box-shadow: 0px 0px 20px 7px #fff3e0;
+}
+
+@media screen and (max-width: 900px){
+        
+ .house{
+     transform: scale(0.6);
+     margin-left: -20% !important;
+     margin-top: -170px !important;
+ }
+ .sun{
+     height: 50px;
+ }
+ .window-1{
+    
+ }
+
+
+}
+
+.gone{
+    visibility: hidden;
+}
+
+.drop{
+     width: 100px;
+    height: 100px;
+    background-color: grey;
+    position: absolute;
+    margin-top: 180px !important;
+    cursor: pointer;
+    border-radius: 10px;
+    right: 10%;
+    transform: scale3d(1.6);
+}

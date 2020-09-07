@@ -1,0 +1,64 @@
+
+    @media screen and (max-width: 1200px){
+        
+        .mt{
+            margin-top: 20px;
+        }
+        .x{
+            margin-right: 200px !important;
+        }
+    }
+
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+      }
+      
+      .flip-card-front {
+        background-image: url('https://images.pexels.com/photos/162994/coffee-coffee-cup-cup-cafe-162994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-size: cover;
+        color: black;
+      }
+      
+      .flip-card-back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+      }
+
+      .overlap{
+          background-color: rgb(52, 58, 64, 0.6);
+          height: 300px;
+          width: 300px;
+      }
+
+   .hiddentext{
+     visibility: hidden !important;
+   }
+

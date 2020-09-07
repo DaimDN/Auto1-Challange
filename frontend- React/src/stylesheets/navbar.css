@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+.menu{
+    font-family: 'Roboto Slab', serif;
+}
+.main{
+    font-family: 'Sacramento', cursive;
+    font-size: 44px;
+    font-weight: 900;
+}
